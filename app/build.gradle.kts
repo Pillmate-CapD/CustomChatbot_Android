@@ -68,4 +68,5 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.9.1")
     implementation("com.google.code.gson:gson:2.8.8")
 
+    implementation("com.github.AleSpero:ExpandableCardView:0.6_beta")
 }
