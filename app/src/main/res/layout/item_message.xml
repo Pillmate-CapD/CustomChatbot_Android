@@ -1,21 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="8dp"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/messageTextView"
+    <LinearLayout
+        android:id="@+id/left_chat_view"
+        android:layout_alignParentStart="true"
+        android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="@android:color/black"
-        android:background="@drawable/message_background"
+        android:orientation="vertical"
         android:padding="8dp"
         android:maxWidth="240dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"/>
+        android:backgroundTint="#F5F6F8"
+        android:background="@drawable/message_background">
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/left_chat_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif"
+            android:textColor="@android:color/black"
+            android:maxWidth="240dp"
+            android:text="파스틱정을 못드시는군요.\n앞으로의 알림을 끌까요?"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:visibility="visible"
+                android:backgroundTint="#EAEBED"
+                android:textColor="#898989"
+                android:id="@+id/btn1"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:maxWidth="240dp"
+                android:text="그대로 두기"
+                android:layout_marginRight="4dp"/>
+
+            <Button
+                android:visibility="visible"
+                android:backgroundTint="#EAEBED"
+                android:textColor="#898989"
+                android:id="@+id/btn2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:maxWidth="240dp"
+                android:text="끄기"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right_chat_view"
+        android:layout_alignParentEnd="true"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:maxWidth="240dp"
+        android:backgroundTint="#F5F6F8"
+        android:background="@drawable/message_background">
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/right_chat_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@android:color/black"
+            android:maxWidth="240dp"
+            android:text="알람을 끌게요" />
+
+
+    </LinearLayout>
+
+
 
 
 </RelativeLayout>
